@@ -1,0 +1,145 @@
+.p-button {
+  min-width: 100px;
+  max-width: 200px;
+  height: 40px;
+  margin: 5px;
+  padding: 2px 10px;
+  color: $button-text;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  justify-content: center;
+  &:disabled {
+    background-color: $danger-button-disable !important;
+    color: $button-disable-text !important;
+  }
+  &.p-button-primary {
+    background: $primary-button;
+    &:enabled {
+      &:hover {
+        background: $primary-button-hover;
+      }
+      &:active {
+        background: $primary-button-active;
+      }
+    }
+  }
+  &.p-button-secondary {
+    background: $secondary-button;
+    &:enabled {
+      &:hover {
+        background: $secondary-button-hover;
+      }
+      &:active {
+        background: $secondary-button-active;
+      }
+    }
+  }
+  &.p-button-tertiary {
+    background: $tertiary-button;
+    color: $button-tertiary-text;
+    border: 1px solid $tertiary-button-border;
+    &:enabled {
+      &:hover {
+        background: $tertiary-button-hover;
+        color: $button-tertiary-text;
+      }
+      &:active {
+        background: $tertiary-button-active;
+        color: $button-tertiary-text;
+      }
+    }
+    &:disabled {
+      background-color: $tertiary-button-disable !important;
+      border: 1px solid $tertiary-button-disable-border;
+      color: $button-disable-text !important;
+    }
+  }
+  &.p-button-danger {
+    background: $danger-button;
+    &:enabled {
+      &:hover {
+        background: $danger-button-hover;
+      }
+      &:active {
+        background: $danger-button-active;
+      }
+    }
+  }
+  &.p-button-icon-border {
+    min-width: 130px;
+    background: $icon-border-button;
+    color: $button-icon-border-text;
+    border: 1px solid $icon-border-button-border;
+    &:enabled {
+      &:hover {
+        background: $icon-border-button-hover;
+        color: $button-icon-border-text;
+      }
+      &:active {
+        background: $icon-border-button-active;
+        color: $button-icon-border-text;
+      }
+    }
+    &:disabled {
+      background-color: $icon-border-button-disable !important;
+      border: 1px solid $icon-border-button-disable-border;
+    }
+  }
+  &.p-button-icon {
+    min-width: 130px;
+    background: $icon-button;
+    &:enabled {
+      &:hover {
+        background: $icon-button-hover;
+      }
+      &:active {
+        background: $icon-button-active;
+      }
+    }
+  }
+}
+
+.pi {
+  position: relative;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  &-delete {
+    &::before {
+      @include pi-icon;
+      background: url("../../images/ic-garbage.svg") center no-repeat;
+    }
+  }
+  &-deleteGray {
+    &::before {
+      @include pi-icon;
+      background: url("../../images/ic-garbage-gray.svg") center no-repeat;
+    }
+  }
+  &-add {
+    &::before {
+      @include pi-icon;
+      background: url("../../images/ic-add-white.svg") center no-repeat;
+    }
+  }
+  &-addGray {
+    &::before {
+      @include pi-icon;
+      background: url("../../images/ic-add-gray.svg") center no-repeat;
+    }
+  }
+  &-chevron-down {
+    margin-right: 0;
+    // border-left: 1px solid $gray-100;
+    padding-left: 32px;
+    &::before {
+      @include pi-icon;
+      background: url("../../images/select-default.svg") center no-repeat;
+    }
+  }
+}
+.p-button-label {
+  flex: initial;
+  word-break: break-word;
+}

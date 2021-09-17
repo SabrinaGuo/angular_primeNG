@@ -1,3 +1,4 @@
+import { UtilityModule } from './../../utility/utility.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -7,6 +8,6 @@ import { UiSlicingIndexComponent } from './ui-slicing-index/ui-slicing-index.com
 
 @NgModule({
   declarations: [UiSlicingComponent, UiSlicingIndexComponent],
-  imports: [CommonModule, UiSlicingRoutingModule],
+  imports: [CommonModule, UiSlicingRoutingModule, UtilityModule],
 })
 export class UiSlicingModule {}

@@ -1,2 +1,126 @@
-.test {
+.p-error,
+.p-text-red {
+  color: $red-500;
+}
+.p-inputtext {
+  width: 100%;
+  height: 40px;
+  border: solid 1px $gold-500;
+  background-color: $white-500;
+  color: $black-400;
+  &:enabled {
+    &:focus {
+      border: solid 1px $gold-500;
+      box-shadow: none;
+      &.ng-invalid {
+        &.ng-dirty {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  &.p-disabled {
+    border: solid 1px $gray-100;
+    background-color: $gray-100;
+    opacity: 1;
+    .p-dropdown-label {
+      &.p-placeholder {
+        color: $gray-700;
+      }
+    }
+  }
+  &:not(.p-disabled) {
+    border: solid 1px $gold-500;
+    &:hover {
+      border: solid 1px $gold-500;
+    }
+    &.p-focus {
+      border: solid 1px $gold-500;
+      box-shadow: none;
+    }
+  }
+  &.ng-invalid {
+    &.ng-dirty {
+      border: solid 1px $red-500;
+    }
+  }
+  &.ng-touched {
+    &.ng-invalid {
+      border: solid 1px $red-500;
+    }
+  }
+}
+
+.p-dropdown {
+  // min-width: 315px;
+  width: 100%;
+  border: solid 1px $gold-500;
+  background-color: $white-500;
+  height: 40px;
+  &.p-disabled {
+    border: solid 1px $gray-100;
+    background-color: $gray-100;
+    opacity: 1;
+    .p-dropdown-label {
+      &.p-placeholder {
+        color: $gray-700;
+      }
+    }
+    .pi-chevron-down {
+      // border-left: 1px solid $gray-150;
+    }
+  }
+  &:not(.p-disabled) {
+    border: solid 1px $gold-500;
+    &:hover {
+      border: solid 1px $gold-500;
+    }
+    &.p-focus {
+      border: solid 1px $gold-500;
+      box-shadow: none;
+    }
+  }
+  &.p-dropdown-open {
+    .pi-chevron-down {
+      &::before {
+        @include pi-icon;
+        background: url("../../images/select-default.svg") center no-repeat;
+        transform: translate(-50%, -50%) rotate(-180deg);
+        transition: all 0.3s;
+      }
+    }
+  }
+  .p-inputtext {
+    border: none;
+    &:not(.p-disabled) {
+      &:hover {
+        border: none;
+      }
+    }
+  }
+  .p-dropdown-label {
+    &.p-placeholder {
+      color: $gold-500;
+      padding: 5px 12px;
+      line-height: 27px;
+    }
+  }
+}
+.p-dropdown-items-wrapper {
+  border: solid 1px $gold-500;
+}
+
+.p-dropdown-panel {
+  .p-dropdown-items {
+    .p-dropdown-item {
+      &:not(.p-highlight) {
+        &:not(.p-disabled) {
+          &:hover {
+            background-color: $gold-500;
+            color: $white-500;
+          }
+        }
+      }
+    }
+  }
 }

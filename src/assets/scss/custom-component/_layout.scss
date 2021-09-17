@@ -1,0 +1,66 @@
+// 內容空間設定 ===============================
+.ui_wrap {
+  display: flex;
+  width: 100%;
+  .meun-block {
+    max-width: 200px;
+    width: 100%;
+  }
+  .layout-content {
+    max-width: calc(100% -200px);
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.ui-meun {
+  max-width: 100%;
+  width: 100%;
+  font-size: 20px;
+  padding: 0px;
+  list-style: none;
+  line-height: normal;
+  border: 1px solid lightgray;
+  text-align: center;
+  margin: 0;
+  li {
+    border-bottom: 1px solid lightgray;
+    transition: all 0.3s;
+    &:last-child {
+      border-bottom: none;
+    }
+    &:hover {
+      background-color: lightgray;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 20px 10px;
+    }
+  }
+}
+
+// icon 設定 ===============================
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  &.ic-garbage {
+    background: url("../../images/ic-garbage.svg") center no-repeat;
+    background-size: contain;
+  }
+  &.ic-garbage-gray {
+    background: url("../../images/ic-garbage-gray.svg") center no-repeat;
+    background-size: contain;
+  }
+  &.ic-add-white {
+    background: url("../../images/ic-add-white.svg") center no-repeat;
+    background-size: contain;
+  }
+  &.ic-add-gray {
+    background: url("../../images/ic-add-gray.svg") center no-repeat;
+    background-size: contain;
+  }
+}

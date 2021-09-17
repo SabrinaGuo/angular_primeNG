@@ -1,11 +1,51 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="Sushi">
-  </mat-form-field>
+<section class="mb-20">
+  <h3>input sytle</h3>
+  <p>basic</p>
+  <input type="text" pInputText placeholder="test" />
 
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field>
-</form>
+  <div class="p-field mt-10">
+    <label for="field2">
+      <span class="p-text-red">*</span>Required input
+    </label>
+    <input id="field2" name="field2" type="text" required placeholder="Sales Person NRIC" pInputText
+      [(ngModel)]="field2" [required]="true" #fieldDom2="ngModel" />
+    <small class="p-error" *ngIf="
+        fieldDom2.invalid &&
+        (fieldDom2.dirty || fieldDom2.touched) &&
+        fieldDom2.errors?.required
+      ">This is required field</small>
+  </div>
+</section>
+<section>
+  <h3 class="mb-5">下拉式選單</h3>
+  <div class="dropdown-cover">
+    <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [showClear]="true"
+      placeholder="More">
+      <ng-template pTemplate="selectedItem">
+        <div class="country-item country-item-value" *ngIf="selectedCountry">
+          <div>{{selectedCountry.name}}</div>
+        </div>
+      </ng-template>
+      <ng-template let-country pTemplate="item">
+        <div class="country-item">
+          <div>{{country.name}}</div>
+        </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+  <div class="dropdown-cover mt-5">
+    <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [showClear]="true"
+      [disabled]="true" placeholder="More">
+      <ng-template pTemplate="selectedItem">
+        <div class="country-item country-item-value" *ngIf="selectedCountry">
+          <div>{{selectedCountry.name}}</div>
+        </div>
+      </ng-template>
+      <ng-template let-country pTemplate="item">
+        <div class="country-item">
+          <div>{{country.name}}</div>
+        </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+</section>
